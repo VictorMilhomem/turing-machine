@@ -1,4 +1,5 @@
-from Machine.turing_machines import binary_divisible_3, binary_increment, copies_string_one, palindrome, three_equal_lengths
+from Machine import *
+import sys
 
 def intro():
     print("############################### Máquina de Turing Simulação ###############################")
@@ -7,6 +8,7 @@ def intro():
     print("#    (3) Cópia de string de 1's                                                           #")
     print("#    (4) Verificar se string de a's, b's, c's pertence a L =  { a^n b^n c^n| n >= 1}      #")
     print("#    (5) Verificar se string de a's, b's pertence a L =  { ww^r| w: a*b*}                 #")
+    print("#    (6) Sair                                                                             #")
     print("###########################################################################################")
 
 
@@ -26,6 +28,8 @@ def run():
             three_equal_lengths()
         elif fun == 5:
             palindrome()
+        elif fun == 6:
+            sys.exit(0)
         else:
             print("Máquina inexistente\n")
             intro()
@@ -33,7 +37,7 @@ def run():
 
         cont = str(input("Deseja sair (s/n)? ").lower())
         if cont in valid:
-            break
+            sys.exit(0)
         else:
             intro()
             continue

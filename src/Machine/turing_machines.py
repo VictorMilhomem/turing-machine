@@ -93,7 +93,7 @@ def copies_string_one():
 def three_equal_lengths():
     """ Turing machine that accepts a string in L = {a^n b^n c^n | n >= 1} """
 
-    number = str(input("Digite uma string de a*b*c*:\n"))
+    number = str(input("Digite uma string de a^n b^n c^n:\n"))
     sep = {}
     for i in range(len(number)):
         if number[i] == 'a' or number[i] == 'b' or number[i] == 'c':
